@@ -19,7 +19,7 @@
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <link rel="stylesheet" href="styles.css?v=20260804c" />
+  <link rel="stylesheet" href="styles.css?v=20260818" />
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -98,7 +98,7 @@
       </figure>
     </section>
 
-    <div class="capability-marquee" aria-label="Areas of expertise">
+    <div class="capability-marquee" role="region" aria-label="Areas of expertise">
       <div class="marquee-track">
         <span>AI workflows</span><i aria-hidden="true"></i>
         <span>Retail systems</span><i aria-hidden="true"></i>
@@ -158,34 +158,86 @@
             </div>
           </article>
 
-          <article class="project-card project-card-narrow">
-            <div class="project-visual visual-ev" aria-hidden="true">
-              <div class="route-map">
-                <i class="route-line"></i>
-                <span class="route-start"></span>
-                <span class="route-stop"></span>
-                <b>72%</b>
-              </div>
-            </div>
+          <article class="project-card project-card-narrow project-card-voltmap">
+            <figure class="project-visual visual-voltmap">
+              <img
+                class="voltmap-screen voltmap-screen-detail"
+                src="assets/voltmap/station-detail.jpg"
+                alt="VoltMap charger detail showing readiness, open stalls, signal, payment, and backup information"
+                width="603"
+                height="1311"
+                loading="lazy"
+              />
+              <img
+                class="voltmap-screen voltmap-screen-map"
+                src="assets/voltmap/map.jpg"
+                alt="VoltMap charger map ranking the best nearby charging option"
+                width="603"
+                height="1311"
+                loading="lazy"
+              />
+              <img
+                class="voltmap-screen voltmap-screen-routes"
+                src="assets/voltmap/routes.jpg"
+                alt="VoltMap route planner with balanced, fast, reliable, and cheap priorities"
+                width="603"
+                height="1311"
+                loading="lazy"
+              />
+              <figcaption>Native iOS · Simulator capture</figcaption>
+            </figure>
             <div class="project-copy">
-              <h3>EV charging companion</h3>
-              <p>Charger discovery, battery-aware recommendations, route planning, and support for longer electric trips.</p>
-              <span>Mobile product · Route intelligence</span>
+              <h3>VoltMap</h3>
+              <p>
+                A native SwiftUI iPhone app built to answer the question EV drivers care
+                about: which charger is most likely to work right now? VoltMap ranks nearby
+                stations by confidence, explains stall availability, signal freshness,
+                payment reliability, and backup options, then carries that decision into
+                route planning, saved commutes, alerts, and issue reporting.
+              </p>
+              <div class="project-card-footer">
+                <span>SwiftUI · MapKit · EV confidence</span>
+              </div>
             </div>
           </article>
 
-          <article class="project-card project-card-wide">
-            <div class="project-visual visual-picks" aria-hidden="true">
-              <div class="scoreboard">
-                <div><span>BUF</span><strong>24</strong></div>
-                <i>WEEK 08</i>
-                <div><span>KC</span><strong>21</strong></div>
-              </div>
-            </div>
+          <article class="project-card project-card-wide project-card-game">
+            <figure class="project-visual visual-anygivenpick">
+              <img
+                class="agp-screen agp-screen-desktop"
+                src="assets/anygivenpick/sign-in.png"
+                alt="Any Given Pick desktop sign-in screen and game instructions"
+                width="1440"
+                height="1080"
+                loading="lazy"
+              />
+              <span class="agp-phone-frame">
+                <img
+                  class="agp-screen agp-screen-mobile"
+                  src="assets/anygivenpick/sign-in-mobile.png"
+                  alt="Any Given Pick mobile sign-in experience"
+                  width="430"
+                  height="1342"
+                  loading="lazy"
+                />
+              </span>
+              <figcaption>Live product · Public beta</figcaption>
+            </figure>
             <div class="project-copy">
-              <h3>NFL Pick’em platform</h3>
-              <p>Weekly picks, automated scoring, standings, prize management, and admin controls in one streamlined experience.</p>
-              <span>Web platform · Automated scoring</span>
+              <h3>Any Given Pick</h3>
+              <p>
+                A free weekly pro-football pick’em game for approved Indiana adults. Players
+                choose one winner in every matchup, set a Monday-night score tiebreaker, and
+                review a complete entry before the weekly deadline. Autosaved drafts, published
+                schedules, scoring, standings, secure sign-in, and eligibility checks keep the
+                experience clear from first pick to final result.
+              </p>
+              <div class="project-card-footer">
+                <span>Product design · Full-stack development · PWA</span>
+                <a href="https://anygivenpick.app/" target="_blank" rel="noopener" aria-label="Visit Any Given Pick in a new tab">
+                  Visit the live game <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </div>
           </article>
         </div>
@@ -202,10 +254,10 @@
           shapes every product decision I make—from the first workflow map to the final interface.
         </p>
       </div>
-      <div class="story-facts" aria-label="Experience summary">
-        <div><strong>15+</strong><span>years leading retail operations</span></div>
-        <div><strong>6+</strong><span>active software projects</span></div>
-        <div><strong>1</strong><span>standard: useful in the real world</span></div>
+      <div class="story-facts" role="list" aria-label="Experience summary">
+        <div role="listitem"><strong>15+</strong><span>years leading retail operations</span></div>
+        <div role="listitem"><strong>6+</strong><span>active software projects</span></div>
+        <div role="listitem"><strong>1</strong><span>standard: useful in the real world</span></div>
       </div>
     </section>
 
@@ -271,6 +323,6 @@
 
   <script src="vendor/gsap.min.js?v=3.12.5"></script>
   <script src="vendor/ScrollTrigger.min.js?v=3.12.5"></script>
-  <script src="script.js?v=20260804"></script>
+  <script src="script.js?v=20260818"></script>
 </body>
 </html>

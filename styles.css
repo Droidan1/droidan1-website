@@ -766,6 +766,187 @@ h1 {
   font-size: 1.7rem;
 }
 
+.visual-voltmap {
+  min-height: 360px;
+  margin: 0;
+  padding: 36px 20px 22px;
+  background:
+    radial-gradient(circle at 50% 24%, rgba(65, 188, 255, 0.38), transparent 17rem),
+    linear-gradient(145deg, #102c52, #08182c 72%);
+}
+
+.visual-voltmap::before {
+  inset: 0;
+  background:
+    linear-gradient(rgba(116, 167, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(116, 167, 255, 0.08) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+
+.voltmap-screen {
+  position: absolute;
+  bottom: -62px;
+  z-index: 1;
+  width: 43%;
+  height: auto;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 18px;
+  box-shadow: 0 30px 70px rgba(0, 10, 28, 0.66);
+}
+
+.voltmap-screen-map {
+  left: 50%;
+  z-index: 3;
+  width: 48%;
+  transform: translateX(-50%);
+}
+
+.voltmap-screen-detail {
+  left: 7%;
+  transform: rotate(-7deg) translateY(22px);
+}
+
+.voltmap-screen-routes {
+  right: 7%;
+  transform: rotate(7deg) translateY(22px);
+}
+
+.visual-voltmap figcaption {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  z-index: 4;
+  padding: 7px 10px;
+  border: 1px solid rgba(116, 167, 255, 0.46);
+  border-radius: 999px;
+  color: #b7d4ff;
+  background: rgba(4, 18, 36, 0.78);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.project-card-voltmap .project-copy {
+  min-height: 290px;
+}
+
+.project-card-voltmap .project-copy p {
+  text-wrap: pretty;
+}
+
+.visual-anygivenpick {
+  min-height: 360px;
+  margin: 0;
+  padding: 38px clamp(24px, 4vw, 48px);
+  align-items: end;
+  background: #063d2b;
+}
+
+.visual-anygivenpick::before {
+  inset: 0;
+  background:
+    linear-gradient(115deg, rgba(246, 239, 221, 0.08), transparent 48%),
+    radial-gradient(circle at 88% 12%, rgba(242, 201, 40, 0.24), transparent 18rem),
+    linear-gradient(rgba(246, 239, 221, 0.05) 1px, transparent 1px);
+  background-size: auto, auto, 100% 56px;
+}
+
+.agp-screen {
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(246, 239, 221, 0.23);
+  box-shadow: 0 28px 70px rgba(0, 17, 11, 0.5);
+}
+
+.agp-screen-desktop {
+  width: 88%;
+  height: auto;
+  border-radius: 12px;
+  transform: perspective(900px) rotateX(2deg) rotateY(4deg) translateX(-4%);
+}
+
+.agp-phone-frame {
+  position: absolute;
+  right: clamp(18px, 4vw, 42px);
+  bottom: 28px;
+  z-index: 2;
+  width: clamp(112px, 22%, 168px);
+  height: 82%;
+  padding: 5px;
+  overflow: hidden;
+  border: 1px solid rgba(246, 239, 221, 0.36);
+  border-radius: 22px;
+  background: #021d15;
+  box-shadow: 0 30px 80px rgba(0, 17, 11, 0.65);
+  transform: rotate(2.5deg);
+}
+
+.agp-screen-mobile {
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 17px;
+  box-shadow: none;
+}
+
+.visual-anygivenpick figcaption {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  z-index: 3;
+  padding: 7px 10px;
+  border: 1px solid rgba(242, 201, 40, 0.42);
+  border-radius: 999px;
+  color: #f2c928;
+  background: rgba(0, 28, 20, 0.78);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.project-card-game .project-copy {
+  min-height: 290px;
+}
+
+.project-card-game .project-copy p {
+  max-width: 660px;
+}
+
+.project-card-footer {
+  margin-top: auto;
+  padding-top: 28px;
+  display: flex;
+  gap: 18px;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.project-card-footer > span {
+  color: var(--accent);
+  font-size: 0.77rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.project-card-footer a {
+  flex: 0 0 auto;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(244, 247, 251, 0.35);
+  color: var(--paper);
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.project-card-footer a:hover {
+  color: #f2c928;
+  border-color: #f2c928;
+}
+
 .scoreboard {
   position: relative;
   z-index: 1;
@@ -1213,6 +1394,19 @@ footer p {
     min-height: 520px;
   }
 
+  .visual-anygivenpick {
+    min-height: 330px;
+  }
+
+  .visual-voltmap {
+    min-height: 340px;
+  }
+
+  .project-card-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .principles-carousel {
     grid-template-columns: 1fr;
   }
@@ -1258,6 +1452,32 @@ footer p {
   .dashboard-shell,
   .scoreboard {
     width: 88%;
+  }
+
+  .visual-anygivenpick {
+    min-height: 300px;
+    padding: 52px 18px 22px;
+  }
+
+  .visual-voltmap {
+    min-height: 310px;
+  }
+
+  .voltmap-screen {
+    bottom: -56px;
+    border-radius: 15px;
+  }
+
+  .agp-screen-desktop {
+    width: 100%;
+    transform: translateX(-8%);
+  }
+
+  .agp-phone-frame {
+    right: 14px;
+    bottom: 18px;
+    width: 31%;
+    height: 72%;
   }
 
   .project-copy {
