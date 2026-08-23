@@ -913,12 +913,60 @@ h1 {
   transform: translateY(-50%);
 }
 
+.agp-browser-frame {
+  position: absolute;
+  top: 50%;
+  left: clamp(18px, 4vw, 42px);
+  z-index: 1;
+  width: min(72%, 470px);
+  aspect-ratio: 4 / 3;
+  padding: 29px 8px 8px;
+  overflow: hidden;
+  border: 1px solid rgba(246, 239, 221, 0.38);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #5b625d, #101714 22%, #030a08 100%);
+  box-shadow:
+    0 34px 78px rgba(0, 17, 11, 0.54),
+    inset 1px 1px rgba(255, 255, 255, 0.3),
+    inset -1px -1px rgba(0, 0, 0, 0.62);
+  transform: translateY(-50%) perspective(900px) rotateY(4deg) rotateZ(-1deg);
+  transform-origin: center left;
+}
+
+.agp-browser-address {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  left: 10px;
+  height: 14px;
+  padding: 1px 8px 0;
+  overflow: hidden;
+  border: 1px solid rgba(246, 239, 221, 0.12);
+  border-radius: 5px;
+  color: rgba(246, 239, 221, 0.62);
+  background: rgba(0, 20, 14, 0.76);
+  font-size: 0.48rem;
+  line-height: 11px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.agp-screen-desktop {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: none;
+}
+
 .agp-phone-frame {
   position: absolute;
   right: clamp(18px, 5vw, 38px);
   bottom: 26px;
   z-index: 2;
-  width: clamp(190px, 48%, 248px);
+  width: clamp(190px, 40%, 248px);
   aspect-ratio: 430 / 932;
   padding: 7px;
   border: 1px solid rgba(246, 239, 221, 0.48);
@@ -1530,6 +1578,11 @@ footer p {
     width: min(54%, 210px);
   }
 
+  .agp-browser-frame {
+    left: 18px;
+    width: min(72%, 390px);
+  }
+
   .visual-voltmap {
     min-height: 340px;
   }
@@ -1604,9 +1657,30 @@ footer p {
   }
 
   .agp-phone-frame {
-    right: 14px;
+    right: 12px;
     bottom: 16px;
-    width: 180px;
+    width: 150px;
+  }
+
+  .agp-browser-frame {
+    left: 12px;
+    width: 56%;
+    padding: 23px 6px 6px;
+    border-radius: 13px;
+  }
+
+  .agp-browser-address {
+    top: 6px;
+    right: 7px;
+    left: 7px;
+    height: 11px;
+    padding-top: 0;
+    font-size: 0.4rem;
+    line-height: 9px;
+  }
+
+  .agp-screen-desktop {
+    border-radius: 7px;
   }
 
   .project-copy {
