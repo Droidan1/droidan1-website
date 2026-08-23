@@ -606,6 +606,86 @@ h1 {
   grid-row: 1;
 }
 
+.project-card-featured.project-card-operations {
+  min-height: 0;
+  display: block;
+}
+
+.operations-gallery {
+  display: grid;
+  background: #07111f;
+}
+
+.operations-shot {
+  margin: 0;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background: #07111f;
+}
+
+.operations-shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.operations-shot figcaption {
+  padding: 14px clamp(18px, 3vw, 30px) 16px;
+  color: var(--muted);
+  background: #0b1626;
+  font-size: 0.75rem;
+  font-weight: 540;
+  letter-spacing: 0.01em;
+}
+
+.project-card-featured .operations-project-copy {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: clamp(34px, 6vw, 84px);
+  align-items: end;
+}
+
+.operations-project-intro p,
+.operations-project-meta p {
+  max-width: 660px;
+  text-wrap: pretty;
+}
+
+.operations-project-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.operations-project-meta .operations-project-invite {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--paper);
+}
+
+.operations-project-invite a {
+  width: fit-content;
+  margin-top: 10px;
+  padding-bottom: 3px;
+  display: block;
+  border-bottom: 1px solid rgba(116, 167, 255, 0.55);
+  color: var(--accent);
+  font-weight: 650;
+}
+
+.operations-project-invite a:hover {
+  border-color: var(--paper);
+  color: var(--paper);
+}
+
+.operations-project-meta .project-card-footer {
+  margin-top: 34px;
+  padding-top: 0;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 .project-explorations {
   margin-top: clamp(64px, 8vw, 96px);
   padding-top: 34px;
@@ -1538,6 +1618,10 @@ footer p {
     display: flex;
   }
 
+  .project-card-featured.project-card-operations {
+    display: block;
+  }
+
   .project-card-featured.project-card-voltmap .project-visual,
   .project-card-featured.project-card-voltmap .project-copy {
     grid-column: auto;
@@ -1554,6 +1638,17 @@ footer p {
 
   .project-card-featured .project-copy {
     min-height: 340px;
+  }
+
+  .project-card-featured .operations-project-copy {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .operations-shot figcaption {
+    padding: 12px 16px 14px;
+    font-size: 0.7rem;
   }
 
   .project-card {
