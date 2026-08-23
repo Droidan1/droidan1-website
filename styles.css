@@ -119,12 +119,21 @@ footer {
   flex: 0 0 auto;
 }
 
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+}
+
 .site-logo {
   width: 174px;
   height: 46px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 8px;
+  object-fit: contain;
+  object-position: left center;
+  transition: transform 180ms ease;
+}
+
+.brand-lockup:hover .site-logo {
+  transform: translateY(-1px);
 }
 
 .desktop-nav {
@@ -1386,11 +1395,9 @@ footer {
   border-top: 1px solid var(--line);
 }
 
-.footer-brand img {
+.footer-brand .site-logo {
   width: 154px;
-  height: 42px;
-  object-fit: cover;
-  border-radius: 8px;
+  height: auto;
 }
 
 footer p {
@@ -1443,9 +1450,9 @@ footer p {
     padding: 7px 8px 7px 12px;
   }
 
-  .site-logo {
+  .site-header .site-logo {
     width: 142px;
-    height: 39px;
+    height: auto;
   }
 
   .desktop-nav {
