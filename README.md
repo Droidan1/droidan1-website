@@ -10,8 +10,12 @@ GitHub: https://github.com/Droidan1
 
 - `index.html`
 - `styles.css`
-- `headshot.png`
-- `droidan1-logo.png`
+- `script.js`
+- `vercel.json`
+- `vendor/gsap.min.js`
+- `vendor/ScrollTrigger.min.js`
+- `droidan1-logo-20260823.webp`
+- `droidan1-social-preview-20260823.jpg`
 - `favicon.ico`
 - `favicon-32x32.png`
 - `apple-touch-icon.png`
