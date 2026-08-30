@@ -1,7 +1,8 @@
 # Droidan1 Website
 
-Static portfolio website for Brian Howard, focused on practical AI, mobile products,
-retail technology, and business automation.
+Static portfolio website for Brian Howard, focused on operator-led systems and custom
+software for multi-location retail. Independent mobile and web products are presented
+as supporting evidence in the Product Lab.
 
 - Website: https://www.droidan1.dev
 - Email: brian@droidan1.dev

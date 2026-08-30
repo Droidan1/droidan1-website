@@ -64,6 +64,8 @@
 
   window.gsap.utils.toArray(".project-card").forEach(function (card) {
     const visual = card.querySelector(".project-visual");
+    if (!visual) return;
+
     window.gsap.fromTo(
       visual,
       { scale: 0.88, opacity: 0.46 },
@@ -92,15 +94,4 @@
     });
   });
 
-  window.ScrollTrigger.matchMedia({
-    "(min-width: 1001px)": function () {
-      window.ScrollTrigger.create({
-        trigger: ".work-layout",
-        start: "top 110px",
-        end: "bottom 62%",
-        pin: ".work-intro",
-        pinSpacing: false
-      });
-    }
-  });
 })();
